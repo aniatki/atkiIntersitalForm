@@ -98,6 +98,7 @@ h2 {
     margin-inline: auto;
     padding-block: clamp(.5rem, 5vh, 5rem);
     padding-inline: clamp(1rem, 3vh, 20rem);
+    max-width: 30em;
 }
 
 .avatar {
@@ -136,9 +137,14 @@ textarea:focus {
     outline: .25em solid var(--clr-primary-700);
 }
 
-.attachments {
+/* .attachments {
     padding-block: var(--spacer-half);
     margin-block-end: var(--spacer-half);
+}
+
+.attachments>*,
+.file-wrapper>* {
+    cursor: pointer;
 }
 
 .file-wrapper {
@@ -149,16 +155,19 @@ textarea:focus {
     padding-block: var(--spacer-half);
     margin-block-start: var(--spacer-half);
     margin-block-end: var(--spacer-half);
-    cursor: pointer;
     transition: color 150ms ease, border 150ms ease;
     color: var(--clr-primary-700);
     user-select: none;
 }
 
-.file-wrapper:hover {
+.file-wrapper-focus {
     color: black;
-    border: 2px dashed var(--clr-neutral-900);
+    border: 4px dashed var(--clr-neutral-900);
 }
+
+input[type="file"] {
+    display: none;
+} */
 
 button[type="submit"] {
     padding-block: var(--spacer-whole);
@@ -172,6 +181,10 @@ button[type="submit"] {
     background: var(--clr-gradient);
     border: none;
     cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: var(--clr-primary-400);
 }
 
 .social-links-list {
